@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>hello</h1>
+
+    <script>
+      let h = document.querySelector("h1");
+      let i = 0;
+      let arr = ["akash", "vikas", "nidhi"];
+      h.addEventListener("click", () => {
+        h.innerText = `Hello ${arr[i]}`;
+        i++;
+        if (i == arr.length) {
+          i = 0;
+        }
+      });
+      let func = (e) => {
+        console.log(e.target);
+      };
+      h.onclick = func;
+    </script>
+  </body>
+</html>
